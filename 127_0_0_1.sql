@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 25 nov. 2019 à 12:48
+-- Généré le :  mar. 26 nov. 2019 à 09:42
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `acteur` (
   `nationalite_acteur` varchar(255) NOT NULL,
   `photo_acteur` text NOT NULL,
   PRIMARY KEY (`id_acteur`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `acteur`
@@ -85,7 +85,10 @@ INSERT INTO `acteur` (`id_acteur`, `nom_acteur`, `prenom_acteur`, `age_acteur`, 
 (37, 'Caine', 'Michael', 86, 'Anglais', 'Michael_Caine.jpg'),
 (38, 'Hoult', 'Nicholas', 29, 'Anglais', 'nicholas_hoult.jpg'),
 (39, 'Collins', 'Lily', 30, 'Anglaise', 'lily_collins.jpg'),
-(40, 'Meaney', 'Colm', 66, 'Irlandais', 'Colm_Meaney.jpg');
+(40, 'Meaney', 'Colm', 66, 'Irlandais', 'Colm_Meaney.jpg'),
+(41, 'Adlon', 'Pamela', 53, 'Américaine', 'Adlon_Pamela.jpg'),
+(42, 'Cruz', 'Penelopa', 45, 'Espagnole', 'Penelope_Cruz.jpg'),
+(43, 'Whitaker', 'Forest', 58, 'Américain', 'Forest_Whitaker.jpg');
 
 -- --------------------------------------------------------
 
@@ -173,6 +176,54 @@ CREATE TABLE IF NOT EXISTS `jouer` (
   KEY `jouer_film0_FK` (`id_film`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Déchargement des données de la table `jouer`
+--
+
+INSERT INTO `jouer` (`id_acteur`, `id_film`) VALUES
+(1, 1),
+(2, 1),
+(3, 1),
+(4, 2),
+(5, 2),
+(43, 2),
+(6, 3),
+(7, 3),
+(8, 3),
+(9, 4),
+(10, 4),
+(11, 5),
+(42, 5),
+(12, 6),
+(13, 6),
+(14, 6),
+(18, 7),
+(19, 7),
+(20, 7),
+(15, 8),
+(16, 8),
+(17, 8),
+(21, 9),
+(22, 9),
+(23, 9),
+(24, 10),
+(25, 10),
+(26, 10),
+(27, 11),
+(28, 11),
+(29, 12),
+(30, 12),
+(31, 12),
+(32, 13),
+(33, 13),
+(34, 14),
+(35, 15),
+(36, 15),
+(37, 15),
+(38, 16),
+(39, 16),
+(40, 16);
+
 -- --------------------------------------------------------
 
 --
@@ -188,7 +239,7 @@ CREATE TABLE IF NOT EXISTS `realisateur` (
   `nationalite_real` varchar(255) NOT NULL,
   `photo_real` text NOT NULL,
   PRIMARY KEY (`id_real`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `realisateur`
@@ -201,15 +252,16 @@ INSERT INTO `realisateur` (`id_real`, `nom_real`, `prenom_real`, `age_real`, `na
 (4, 'R. Leonetti', 'John', 63, 'Américain', 'john_r_leonetti.jpg'),
 (5, 'Marshall', 'Rob', 59, 'Américain', 'rob_marshall.jpg'),
 (6, 'Girault', 'Jean', 58, 'Français', 'jean_girault.jpg'),
-(7, 'Jackson', 'Peter', 58, 'New-Zealand', 'jean_girault.jpg'),
+(7, 'Jackson', 'Peter', 58, 'New-Zealand', 'peter_jackson.jpg'),
 (8, 'Miller', 'George', 74, 'Australien', 'george_miller.jpg'),
 (9, 'Wachowski', 'Lilly', 51, 'Américain', 'les_frèrex_wachowski.jpg'),
 (10, 'Wachowski', 'Lana', 54, 'Américain', 'les_frèrex_wachowski.jpg'),
 (11, 'Goldbarg', 'Eric', 64, 'Américain', 'eric_goldberg.jpg'),
 (12, 'Miyazaki', 'Hayao', 78, 'Japonais', 'Hayao_Miyazaki.jpg'),
 (13, 'Hosoda', 'Mamoru', 52, 'Japonais', 'Mamoru_Hosoda.jpg'),
-(14, 'Nolan', 'Christopher', 49, 'Anglais', 'Mamoru_Hosoda.jpg'),
-(15, 'Karukoski', 'Dome', 42, 'Grec', 'Dome_Karukoski.jpg');
+(14, 'Nolan', 'Christopher', 49, 'Anglais', 'Christopher_Nolan.jpg'),
+(15, 'Karukoski', 'Dome', 42, 'Grec', 'Dome_Karukoski.jpg'),
+(16, 'Gabriel', 'Mike', 65, 'Américain', 'Mike_Gabriel.jpg');
 
 -- --------------------------------------------------------
 
@@ -224,6 +276,29 @@ CREATE TABLE IF NOT EXISTS `realiser` (
   PRIMARY KEY (`id_film`,`id_real`),
   KEY `realiser_realisateur0_FK` (`id_real`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `realiser`
+--
+
+INSERT INTO `realiser` (`id_film`, `id_real`) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 7),
+(9, 8),
+(10, 9),
+(10, 10),
+(11, 11),
+(12, 12),
+(13, 12),
+(14, 13),
+(15, 14),
+(16, 15);
 
 -- --------------------------------------------------------
 
@@ -254,6 +329,43 @@ CREATE TABLE IF NOT EXISTS `type` (
   PRIMARY KEY (`id_genre`,`id_film`),
   KEY `type_film0_FK` (`id_film`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `type`
+--
+
+INSERT INTO `type` (`id_genre`, `id_film`) VALUES
+(1, 1),
+(2, 1),
+(2, 2),
+(3, 3),
+(4, 3),
+(5, 3),
+(6, 4),
+(7, 4),
+(2, 5),
+(8, 5),
+(8, 6),
+(3, 7),
+(9, 7),
+(3, 8),
+(9, 8),
+(1, 9),
+(2, 9),
+(1, 10),
+(2, 10),
+(9, 11),
+(10, 11),
+(9, 12),
+(10, 12),
+(4, 13),
+(10, 13),
+(3, 14),
+(10, 14),
+(2, 15),
+(4, 15),
+(4, 16),
+(11, 16);
 
 -- --------------------------------------------------------
 
