@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,24 +23,40 @@
 </nav>
 <h1><a href="index.php">Logo</a></h1>
 
+
+<?php
+if (isset($_SESSION['pseudo'])) {
+?>
+<p><?php echo $_SESSION['pseudo'];?></p>
+<?php
+require('deconnection.php');
+}
+else{
+?>
 <button>Connection</button>
 <button>Inscription</button>
+<?php
+}
+?>
 
 </header>
 
-<div>
-<form action="Inscription.php">
+<!-- <div>
+<form action="inscription.php" method="POST">
 <input name="Pseudo" type="text" placeholder="Pseudo">
 <input name="Pass" type="password" placeholder="Mot de passe">
 <input name="Comfpass" type="password" placeholder="Comfirmation mot de passe">
-<input name="Insc" type="submit">
+<input name="inscription" type="submit">
 </form>
-</div>
+</div> -->
 
-<div>
-<form action="Connection.php">
+<?php require('inscription.php') ?>
+<?php require('connection.php') ?>
+
+<!-- <div>
+<form action="connection.php" method="POST">
 <input name="Pseudo" type="text" placeholder="Pseudo">
 <input name="Pass" type="password" placeholder="Mot de passe">
 <input name="Co" type="submit">
 </form>
-</div>
+</div> -->
