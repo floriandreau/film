@@ -1,6 +1,7 @@
 <?php
 
 require('Model/ListReal.php');
+$cheminImg = "asset/img/";
 
 $allreal= getAllreal();
 
