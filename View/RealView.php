@@ -1,9 +1,14 @@
 <?php
-$title= "variablr nom realisateur";
+$title= "variable nom realisateur";
 include 'header.php';
 
-var_dump($real);
+
 foreach ($real as $key => $value) {
+    $title="";
+    $date=$value['date_sortie_film'];
+    $date=explode("-",$date);
+    $newDate = $date[2].'/'.$date[1].'/'.$date[0];
+    var_dump ($value);
 ?>
 <div>
 <img src="<?php echo $cheminImg.$value['photo_real'];?>" alt="photo de <?php echo $value['nom_real']. $value['prenom_real']; ?>">
@@ -24,9 +29,20 @@ echo $value['age_real'];
 echo $value['nationalite_real'];
 ?>
 </p>
-<div>Liste des films</div>
+<div>
+    <p>Filmographie</p>
+<img src="<?php echo $cheminImg.$value['affiche_film'];?>" alt="affiche du film <?php echo $value['titre_film']; ?>">
+<p><?php echo $value ['titre_film']?></p>
+<p><?php
+ echo $newDate;?></p> 
+<?php
+
+?></p>
+</div>
 </div>
 <?php
+
+
 }
 include 'footer.php';
 ?>

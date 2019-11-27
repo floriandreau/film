@@ -20,6 +20,20 @@ session_start();
     <li><a href="index.php?page=ListFilm">Films</a></li>
     <li><a href="index.php?page=ListAct">Acteurs</a></li>
     <li><a href="index.php?page=ListReal">Réalisateurs</a></li>
+<?php
+
+if (isset($_SESSION['role'])) {
+    if ($_SESSION['role'] == 1 || $_SESSION['role'] == 2) {
+        
+?>
+<li>
+<a href="index.php?page=ListUser">User</a>
+</li>
+<?php
+    }
+}
+
+?>
 </ul>
 </nav>
 
@@ -49,22 +63,5 @@ else{
 
 </header>
 
-<!-- <div>
-<form action="inscription.php" method="POST">
-<input name="Pseudo" type="text" placeholder="Pseudo">
-<input name="Pass" type="password" placeholder="Mot de passe">
-<input name="Comfpass" type="password" placeholder="Comfirmation mot de passe">
-<input name="inscription" type="submit">
-</form>
-</div> -->
-
 <?php require('inscription.php') ?>
 <?php require('connection.php') ?>
-
-<!-- <div>
-<form action="connection.php" method="POST">
-<input name="Pseudo" type="text" placeholder="Pseudo">
-<input name="Pass" type="password" placeholder="Mot de passe">
-<input name="Co" type="submit">
-</form>
-</div> -->

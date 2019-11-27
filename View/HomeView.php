@@ -1,6 +1,6 @@
 <?php
 
-$title = "Acceuil";
+$title = "Accueil";
 include 'header.php';
 
 
