@@ -8,20 +8,25 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>IPSA FICTA <?php echo $title ?></title>
+    <link rel="stylesheet" href="asset/style.css">
+    <title>POP FICTA <?php echo $title ?></title>
 </head>
 <body>
 
-<header>
+<header class="container">
 
-<nav>
+<nav class="mynav">
 <ul>
     <li><a href="index.php?page=ListFilm">Films</a></li>
-    <li><a href="index.php?page=ListReal">Réalisateurs</a></li>
     <li><a href="index.php?page=ListAct">Acteurs</a></li>
+    <li><a href="index.php?page=ListReal">Réalisateurs</a></li>
 </ul>
 </nav>
-<h1><a href="index.php">Logo</a></h1>
+
+<!-- <div class="center"> -->
+<h1><a href="index.php"><img src="asset/elements/popficta.png" class="logo" alt="logo"></a></h1>
+</div>
+
 
 
 <?php
@@ -33,8 +38,11 @@ require('deconnection.php');
 }
 else{
 ?>
-<button>Connection</button>
-<button>Inscription</button>
+<!-- <div class="center"> -->
+<button class="signup">Connection</button>
+<button class="signin">Inscription</button>
+</div>
+
 <?php
 }
 ?>

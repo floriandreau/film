@@ -1,0 +1,89 @@
+$primaryColor : #BA0F0F;
+$secondColor : #EAE3CF;
+$thirdColor : #FFFFFF;
+
+@font-face{
+    font-family: 'nasa';
+    src: url(font/Nasa21.ttf);
+}
+
+@font-face{
+    font-family: 'intro';
+    src: url(font/Intro.otf);
+}
+
+@font-face{
+    font-family: 'intro-in';
+    src: url(font/Intro-Inline.otf);
+}
+
+@font-face{
+    font-family: 'OSCb';
+    src: url(font/OSC-bold.ttf);
+}
+
+
+
+
+body{
+    background-color: $secondColor;
+    margin: 0;
+}
+
+header{
+    width: 100vw;
+    height: 20vh;
+    background-image: url(elements/fond_header.png);
+}
+
+/**** LA GRILLE ****/
+.container{
+display: grid;
+grid-template-columns: repeat(12,1fr);
+grid-auto-rows: 1fr;
+}
+
+/**** LA NAVBAR ****/
+header > nav{
+    grid-column: 1/4;
+    height: 50%;
+    width: auto;
+}
+
+/**** LE LOGO ****/
+.center{
+    width: 100vw;
+    height: 20vh;
+    text-align: center;
+}
+
+h1{
+    grid-column: 6/9;
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    width: 80%;
+    height: auto;
+}
+
+
+/**** LES BOUTONS SIGN IN/SIGN UP ****/
+
+.signup{
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    grid-column: 11/12;
+    grid-row: 1/2;
+}
+
+.signin{
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    grid-column: 12/13;
+    grid-row: 1/2;
+}
+
