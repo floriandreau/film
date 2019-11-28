@@ -11,16 +11,31 @@ foreach ($real as $key => $value) {
     
 ?>
 <div>
-<img src="<?php echo $cheminImg.$value['photo_real'];?>" alt="photo de <?php echo $value['nom_real']. $value['prenom_real']; ?>">
+    <img src="<?php echo $cheminImg.$value['photo_real'];?>" alt="photo de <?php echo $value['nom_real']. $value['prenom_real']; ?>">
 
-<p>
+    <p>
+        <?php
+        echo $value['nom_real'].$value['prenom_real'];
+        ?>
+    </p>
+    <p>
     <?php
-    echo $value['nom_real'].$value['prenom_real'];
+    echo $value['age_real'];
+
     ?>
-</p>
-<p>
-<?php
-echo $value['age_real'];
+    </p>
+    <p>
+    <?php
+    echo $value['nationalite_real'];
+    ?>
+    </p>
+    <div>
+        <p>Filmographie</p>
+    <img src="<?php echo $cheminImg.$value['affiche_film'];?>" alt="affiche du film <?php echo $value['titre_film']; ?>">
+    <p><?php echo $value ['titre_film']?></p>
+    <p><?php
+    echo $newDate;?></p> 
+    <?php
 
 ?>
 </p>
@@ -38,8 +53,6 @@ echo $value['nationalite_real'];
  echo $newDate;?></p> 
 <?php
 
-?></p>
-</div>
 </div>
 <?php
 
