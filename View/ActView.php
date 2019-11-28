@@ -41,7 +41,16 @@ foreach ($ActFilm as $key => $value) {
 <p><?php echo $newDate; ?></p>
 
 </div>
-
+<?php
+    if (isset($_SESSION['role'])) {
+        if ($_SESSION['role'] == 1 || $_SESSION['role'] == 2) {
+            ?>
+            <a href="index.php?page=ModifAct&id=<?php echo $value['id_acteur'];?>">Modifier</a>
+            <a href="index.php?page=ModifAct&id=<?php echo $value['id_acteur'];?>">Supprimer</a>
+            <?php
+        }
+    }
+    ?>
 </div>
 
 
