@@ -22,7 +22,7 @@ session_start();
         <li class="none"><a href="index.php?page=ListAct">Acteurs</a></li>
         <li class="none"><a href="index.php?page=ListReal">Réalisateurs</a></li>
     <?php
-
+ 
     if (isset($_SESSION['role'])) {
         if ($_SESSION['role'] == 1 || $_SESSION['role'] == 2) {
             
