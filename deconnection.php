@@ -7,5 +7,5 @@ if (isset($_POST['deconnection'])) {
 ?>
 
 <form method="POST">
-<button name="deconnection">Déconnecté</button>
+<button class="style_btn" name="deconnection">Déconnecté</button>
 </form>

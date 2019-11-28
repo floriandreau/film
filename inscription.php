@@ -60,10 +60,10 @@
 ?>
 
 <div>
-<form method="POST">
-<input name="nom" type="text" placeholder="Pseudo"  value="<?php if(isset($nom)){ echo $nom; }?>">
-<input name="mdp" type="password" placeholder="Mot de passe"  value="<?php if(isset($mdp)){ echo $mdp; }?>">
-<input name="confmdp" type="password" placeholder="Comfirmation mot de passe">
-<button type="submit" name="inscription">S'inscrire</button>
+<form method="POST" class="style_form g-container grid-5 rows-12 m-a">
+<input class="c2-3 r8-1 gg space_hor style_input" name="nom" type="text" placeholder="Pseudo"  value="<?php if(isset($nom)){ echo $nom; }?>">
+<input class="c2-3 r9-1 gg space_hor style_input" name="mdp" type="password" placeholder="Mot de passe"  value="<?php if(isset($mdp)){ echo $mdp; }?>">
+<input class="c2-3 r10-1 gg space_hor style_input" name="confmdp" type="password" placeholder="Comfirmation mot de passe">
+<button class="c3-1 r11-1 gg space_hor style_submit" type="submit" name="inscription">S'inscrire</button>
 </form>
 </div>
