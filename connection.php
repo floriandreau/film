@@ -51,7 +51,7 @@ if(!empty($_POST)){
 ?>
 
 <div>
-<form method="POST">
+<form class="style_form g-container grid-5 rows-12 m-a" method="POST">
 <?php
     if (isset($er_nom_co)){
 ?>
@@ -59,7 +59,7 @@ if(!empty($_POST)){
 <?php   
     }
 ?>
-    <input name="nom" type="text" placeholder="Pseudo" value="<?php if(isset($nom_co)){ echo $nom_co; }?>" required>
+    <input class="c2-3 r8-1 gg space_hor style_input" name="nom" type="text" placeholder="Pseudo" value="<?php if(isset($nom_co)){ echo $nom_co; }?>" required>
 <?php
     if (isset($er_mdp_co)){
 ?>
@@ -67,8 +67,8 @@ if(!empty($_POST)){
 <?php   
     }
 ?>
-    <input name="mdp" type="password" placeholder="Mot de passe" value="<?php if(isset($mdp_co)){ echo $mdp_co; }?>" required>
+    <input class="c2-3 r9-1 gg space_hor style_input" name="mdp" type="password" placeholder="Mot de passe" value="<?php if(isset($mdp_co)){ echo $mdp_co; }?>" required>
 
-    <button type="submit" name="connexion">Se connecter</button>
+    <button class="c3-1 r10-1 gg space_hor style_submit" type="submit" name="connexion">Se connecter</button>
 </form>
 </div>
