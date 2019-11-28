@@ -13,13 +13,15 @@ foreach ($film as $key => $value) {
 ?>
 
 
-<div>
-<p>
-<?php echo $value['titre_film']?>
-</p>
-<img src="<?php echo $cheminImg.$value['affiche_film'];?>" alt="Affiche du film ">
 
-<p><?php echo $value['titre_film'];?></p>
+
+<div class="filmm">
+<img class="imagefilmm" src="<?php echo $cheminImg.$value['affiche_film'];?>" alt="Affiche du film ">
+
+<div id="synopsisfilm">
+<p id="titrefilmm">
+<?php echo $value['titre_film']?></p>
+
 
 <p><?php echo $newDate; ?></p>
 <?php 
@@ -101,7 +103,7 @@ foreach ($film as $key => $value) {
 </div>
 
 </div>
-
+</div>
 
 
 <?php

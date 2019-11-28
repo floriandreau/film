@@ -1,8 +1,9 @@
-#acteurm{
+.filmm{
     display: flex;
     justify-content:  flex-end;
     align-items: center;
     background-color: #EAE3CF;
+    height: auto;
     
    
     
@@ -10,7 +11,7 @@
 h3{
     font-size: 200%;
 }
-.imgacteurm{
+.imagefilmm{
 width: 600px;
 height: auto;
 
@@ -18,14 +19,8 @@ height: auto;
 
 }
 
-.affichefilmm{
-    width: 100px;
-    height: auto;
 
-
-}
-
-#infoacteurm{
+#synopsisfilm{
 margin-left: 5%;
 width: 30%;
 display: flex;
@@ -33,18 +28,14 @@ justify-content: right;
 flex-direction: column;
 align-content: center;
 }
+
 #titrefilmm {
 font-size: 150%;
 font-weight: 700;
-
 }
+
 .titrefilmm {
     color: black;
  text-decoration: none;
     
 }
-/* .nomacteur{
-margin-left: 50px;
-
-
-} */

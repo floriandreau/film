@@ -8,6 +8,11 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="asset/style_acteur.css">
+    <link rel="stylesheet" href="asset/style_listact.css">
+    <link rel="stylesheet" href="asset/style_listreal.css">
+    <link rel="stylesheet" href="asset/style_real.css">
+    <link rel="stylesheet" href="asset/style_film.css">
     <title>IPSA FICTA <?php echo $title ?></title>
 </head>
 <body>
