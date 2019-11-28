@@ -46,15 +46,18 @@ foreach ($film as $key => $value) {
              foreach ($act as $key_act => $value_act) {
                  $acteur = $value_act['prenom_acteur']." ".$value_act['nom_acteur'];
                  if ($i<count($act)) {
-                     echo $acteur.", ";
-                    }
+                     ?>
+                     <a href="index.php?page=Act&id=<?php echo $value_act['id_acteur'];?>"><?php
+                     echo $acteur.", ";?></a>
+                   <?php }
                     else {
-                        echo $acteur;
+                      ?>  <a href="index.php?page=Act&id=<?php echo $value_act['id_acteur'];?>"><?php
+                     echo $acteur;?></a><?php
                     }
                     $i++;
-            }
+           }?> 
 
-    ?>
+  
         </p>
 
         <?php
@@ -62,17 +65,21 @@ foreach ($film as $key => $value) {
              foreach ($real as $key_real => $value_real) {
                  $realisateur = $value_real['prenom_real']." ".$value_real['nom_real'];
                  if ($i<count($real)) {
-                     echo $realisateur.", ";
-                    }
+                     ?> 
+                     <a href="index.php?page=real&id=<?php echo $value_real['id_real'];?>"><?php echo $realisateur.", ";?></a>
+                     <?php
+                  }
                     else {
-                        echo $realisateur;
-                    }
+                        ?> 
+                        <a href="index.php?page=real&id=<?php echo $value_real['id_real'];?>"><?php echo $realisateur;?></a>
+                        <?php                    }
                     $i++;
             }
             
     ?>
-        </p>
-
+    
+        
+    
 <p><?php echo $value['duree_film'];
 
 
