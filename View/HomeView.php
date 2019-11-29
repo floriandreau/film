@@ -6,11 +6,11 @@ $num = 1;
 
 ?>
 
-<audio class="pop" src="https://freesound.org/data/previews/244/244654_3624044-lq.mp3"></audio>
+<!-- <audio class="pop" src="https://freesound.org/data/previews/244/244654_3624044-lq.mp3"></audio>
 <audio class="pop" src="https://freesound.org/data/previews/411/411642_5121236-lq.mp3"></audio>
-<audio class="pop" src="https://freesound.org/data/previews/245/245645_1038806-lq.mp3"></audio>
+<audio class="pop" src="https://freesound.org/data/previews/245/245645_1038806-lq.mp3"></audio> -->
 
-<div class="slideshow">
+<div class="slideshow" id="blurBody">
     <ul>
         
 <?php

@@ -141,8 +141,8 @@ h1{
 .style_form{
     z-index: 1000;
     background: url(elements/popup_log.png) round;
-    width: 531px;
-    height: 606px;
+    width: 100%;
+    height: 100%;
 }
 
 .style_input{
@@ -159,5 +159,9 @@ h1{
 }
 
 .cache{
+    display: none;
+}
+
+.hide{
     display: none;
 }

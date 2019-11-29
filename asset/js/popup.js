@@ -5,8 +5,14 @@ let body = document.getElementById('blurBody');
 let close_pop = document.getElementById('close_pop');
 co.style.position = "absolute";
 co.style.transform = "translateX(100%)";
+co.style.width = "auto";
+co.style.height = "70vh";
+co.style.top = "15vh";
 insc.style.position = "absolute";
-insc.style.transform = "translateX(100%)";
+insc.style.transform = "translateX(50%)";
+insc.style.width = "auto";
+insc.style.height = "70vh";
+insc.style.top = "15vh";
 co.style.zIndex = "1000000";
 insc.style.zIndex = "1000000";
 function popInsc() {

@@ -51,7 +51,7 @@ if(!empty($_POST)){
 ?>
 
 <div id="pop_co" class="hide">
-<form class="style_form g-container grid-5 rows-12 m-a test cache" method="POST">
+<form class="style_form g-container grid-5 rows-12 m-a test" method="POST">
 <?php
     if (isset($er_nom_co)){
 ?>

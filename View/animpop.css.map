@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,MAAM,CACF,UAAU,CAAE,IAAI,CAChB,QAAQ,CAAE,QAAQ,CAClB,OAAO,CAAE,IAAI,CACb,GAAG,CAAE,CAAC,CACN,IAAI,CAAE,CAAC,CACP,KAAK,CAAC,KAAK,CACX,MAAM,CAAE,KAAK",
-"sources": ["animpop.scss"],
+"mappings": "",
+"sources": [],
 "names": [],
 "file": "animpop.css"
 }
