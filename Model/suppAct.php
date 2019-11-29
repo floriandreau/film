@@ -6,9 +6,9 @@ $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, true);
 
 function supprReal($id){
     global $dbh;
-    $suppr = $dbh->prepare("DELETE realisateur FROM realisateur WHERE realisateur.id_real={$id}");
+    $suppr = $dbh->prepare("DELETE acteur FROM acteur WHERE acteur.id_acteur={$id}");
     $suppr->execute();
-    $delien = $dbh->prepare("DELETE realiser FROM realiser WHERE realiser.id_real={$id}");
+    $delien = $dbh->prepare("DELETE jouer FROM jouer WHERE jouer.id_acteur={$id}");
     $delien->execute();
     return $suppr;
 }

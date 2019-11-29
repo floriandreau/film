@@ -104,8 +104,13 @@ foreach ($film as $key => $value) {
 
 </div>
 </div>
+<?php 
+$video = explode('/', $value['bande_film']);
+$watch = explode('=', $video[3]);
+$newVideo = $video[0]."//".$video[2]."/embed"."/".$watch[1];
+?>
 
-
+<iframe src="<?php echo $newVideo; ?>"></iframe>
 <?php
 }
 include 'footer.php';
