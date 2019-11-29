@@ -14,7 +14,7 @@ foreach ($real as $key => $value) {
     <img class="imagerealm"src="<?php echo $cheminImg.$value['photo_real'];?>" alt="photo de <?php echo $value['nom_real']. $value['prenom_real']; ?>">
 <div id="inforealm">
     
-       <h3><?php
+       <h3> <?php
      echo $value['nom_real'].$value['prenom_real'];
         ?></h3> 
     
