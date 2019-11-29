@@ -16,19 +16,28 @@ function ajoutFilm($titre, $dure, $date, $pegi, $studio, $affiche, $bande, $syno
 function lienFR($idReal, $idFILM){
     global $dbh;
 
-    $ajout = $dbh->prepare("INSERT INTO realiser (id_real, id_film) VALUES (?, ?)");
-    $ajout->execute(array($idReal, $idFILM));
+    $LienReal = $dbh->prepare("INSERT INTO realiser (id_real, id_film) VALUES (?, ?)");
+    $LienReal->execute(array($idReal, $idFILM));
     
-    return $ajout;
+    return $LienReal;
 }
 
 function lienFA($idAct, $idFILM){
     global $dbh;
 
-    $ajout = $dbh->prepare("INSERT INTO jouer (id_acteur, id_film) VALUES (?, ?)");
-    $ajout->execute(array($idAct, $idFILM));
+    $LienAct = $dbh->prepare("INSERT INTO jouer (id_acteur, id_film) VALUES (?, ?)");
+    $LienAct->execute(array($idAct, $idFILM));
     
-    return $ajout;
+    return $LienAct;
+}
+
+function lienFG($idGenre, $idFILM){
+    global $dbh;
+
+    $LienGenre = $dbh->prepare("INSERT INTO type (id_genre, id_film) VALUES (?, ?)");
+    $LienGenre->execute(array($idGenre, $idFILM));
+    
+    return $LienGenre;
 }
 
 function listeAct(){
@@ -51,13 +60,23 @@ function listeReal(){
     return $LR;
 }
 
+function listeGenre(){
+    global $dbh;
+
+    $LG = $dbh->prepare("SELECT * FROM genre");
+    $LG->execute();
+    $LG = $LG->fetchAll(PDO::FETCH_ASSOC);
+
+    return $LG;
+}
+
 function ajoutAct($nomA, $prenomA, $ageA, $nationA, $photoA){
     global $dbh;
 
-    $ajout = $dbh->prepare("INSERT INTO acteur (nom_acteur, prenom_acteur, age_acteur, nationalite_acteur, photo_acteur) VALUES (?, ?, ?, ?, ?)");
-    $ajout->execute(array($nomA, $prenomA, $ageA, $nationA, $photoA));
+    $ajoutA = $dbh->prepare("INSERT INTO acteur (nom_acteur, prenom_acteur, age_acteur, nationalite_acteur, photo_acteur) VALUES (?, ?, ?, ?, ?)");
+    $ajoutA->execute(array($nomA, $prenomA, $ageA, $nationA, $photoA));
     
-    return $ajout;
+    return $ajoutA;
 }
 
 function ajoutReal($nomR, $prenomR, $ageR, $nationR, $photoR){
@@ -77,4 +96,13 @@ function idFilm(){
     $idf = $idf->fetchAll(PDO::FETCH_ASSOC);
 
     return $idf;
+}
+
+function ajoutGenre($nomG){
+    global $dbh;
+
+    $ajoutR = $dbh->prepare("INSERT INTO genre (type_genre) VALUES (?)");
+    $ajoutR->execute(array($nomG));
+    
+    return $ajoutR;
 }

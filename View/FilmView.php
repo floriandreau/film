@@ -15,16 +15,15 @@ foreach ($film as $key => $value) {
 
 
 
-<div class="filmm">
+<div class="filmm" id="blurBody">
 <img class="imagefilmm" src="<?php echo $cheminImg.$value['affiche_film'];?>" alt="Affiche du film ">
 
 <div id="synopsisfilm">
 <p id="titrefilmm">
 <?php echo $value['titre_film']?></p>
-<br>
+
 
 <p><?php echo $newDate; ?></p>
-<br>
 <?php 
      $i=1;
      foreach ($genre as $key_genre => $value_genre) {
@@ -41,8 +40,7 @@ foreach ($film as $key => $value) {
     }
     ?>
     
-    <br>
-    <br>
+     
          
         <p>
             <?php
@@ -51,11 +49,11 @@ foreach ($film as $key => $value) {
                  $acteur = $value_act['prenom_acteur']." ".$value_act['nom_acteur'];
                  if ($i<count($act)) {
                      ?>
-                     <a href="index.php?page=Act&id=<?php echo $value_act['id_acteur'];?>">Acteur : <?php
+                     <a href="index.php?page=Act&id=<?php echo $value_act['id_acteur'];?>"><?php
                      echo $acteur.", ";?></a>
                    <?php }
                     else {
-                      ?>  <a href="index.php?page=Act&id=<?php echo $value_act['id_acteur'];?>"> <?php
+                      ?>  <a href="index.php?page=Act&id=<?php echo $value_act['id_acteur'];?>"><?php
                      echo $acteur;?></a><?php
                     }
                     $i++;
@@ -63,56 +61,56 @@ foreach ($film as $key => $value) {
 
   
         </p>
-        <br>
+
         <?php
             $i=1;
              foreach ($real as $key_real => $value_real) {
                  $realisateur = $value_real['prenom_real']." ".$value_real['nom_real'];
                  if ($i<count($real)) {
                      ?> 
-                  <a href="index.php?page=real&id=<?php echo $value_real['id_real'];?>"> <?php echo $realisateur.", ";?></a> 
+                     <a href="index.php?page=real&id=<?php echo $value_real['id_real'];?>"><?php echo $realisateur.", ";?></a>
                      <?php
                   }
                     else {
                         ?> 
-                        <a href="index.php?page=real&id=<?php echo $value_real['id_real'];?>">Réalisateur : <?php echo $realisateur;?></a>
+                        <a href="index.php?page=real&id=<?php echo $value_real['id_real'];?>"><?php echo $realisateur;?></a>
                         <?php                    }
                     $i++;
             }
             
     ?>
     
-        <br>
+        
     
-<p>Durée : <?php echo $value['duree_film'];
+<p><?php echo $value['duree_film'];
 
 
 
 ?></p>
 
 <p>
-Age conseillé : <?php echo $value['pegi_film']; ?> ans et +
+<?php echo $value['pegi_film']; ?> ans et +
 </p>
-<br>
-<p class="syno">Synopsis</p><br>
+
+<h2>Synopsis</h2>
 <p>
 <?php echo $value['synopsis_film']; ?>
 </p>
 
 <div>
-<br>
+
+
+</div>
+
+</div>
+</div>
 <?php 
 $video = explode('/', $value['bande_film']);
 $watch = explode('=', $video[3]);
 $newVideo = $video[0]."//".$video[2]."/embed"."/".$watch[1];
 ?>
 
-<iframe class="videofilm"src="<?php echo $newVideo; ?>"></iframe>
-</div>
-
-</div>
-</div>
-
+<iframe src="<?php echo $newVideo; ?>"></iframe>
 <?php
 }
 include 'footer.php';

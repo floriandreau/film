@@ -5,6 +5,7 @@ $cheminImg = "asset/img/";
 
 $listA = listeAct();
 $listR = listeReal();
+$listG = listeGenre();
 $idfilm = idFilm();
 
 foreach ($idfilm as $key => $value) {
@@ -21,25 +22,34 @@ if (isset($_POST['ajout'])) {
     $dateA = $_POST['dateA'];
     $pegi = $_POST['pegi'];
     $studio = $_POST['studio'];
-    $affiche = $_POST['affiche'];
+    // $affiche = $_POST['affiche'];
     $bande = $_POST['bande'];
     $syno = $_POST['syno'];
 
     $date = $dateA.'/'.$dateM.'/'.$dateJ;
     $dure = $dureH.'h'.$dureM;
 
-    $creaReal = ajoutFilm($titre,  $dure, $date, $pegi, $studio, $affiche, $bande,$syno);
+    $image = $_FILES['affiche']['name'];
 
-    $idFILM = $id_Film + 1;
+    if (move_uploaded_file($_FILES['affiche']['tmp_name'], $cheminImg.$image)) {
+        
+        $creaReal = ajoutFilm($titre,  $dure, $date, $pegi, $studio, $image, $bande,$syno);
+        
+        $idFILM = $id_Film + 1;
+        
+        $idReal = $_POST['Rea'];
+        $ajoutReal = lienFR($idReal, $idFILM);
+        
+        $idAct = $_POST['Act'];
+        $ajoutAct = lienFA($idAct, $idFILM);
 
-    $idAct = $_POST['Act'];
-    $ajoutAct = lienFA($idAct, $idFILM);
+        // lien genre film
+        $idAct = $_POST['Genre'];
+        $ajoutGenre = lienFG($idGenre, $idFILM);
+        
+    }
+    
 
-    $idReal = $_POST['Rea'];
-    $ajoutReal = lienFR($idReal, $idFILM);
-
-
-    header('Location: index.php?page=ListFilm');
 }
 if (isset($_POST['annul'])) {
     header('Location: index.php?page=ListFilm');
@@ -55,7 +65,6 @@ if (isset($_POST['ajout_act'])) {
     $creaAct = ajoutAct($nomA, $prenomA, $ageA, $nationA, $photoA);
 
 
-    header('Location: index.php?page=AjoutFilm');
 }
 
 if (isset($_POST['ajout_real'])) {
@@ -68,7 +77,15 @@ if (isset($_POST['ajout_real'])) {
     $creaAct = ajoutReal($nomR, $prenomR, $ageR, $nationR, $photoR);
 
 
-    header('Location: index.php?page=AjoutFilm');
+}
+
+if (isset($_POST['ajout_genre'])) {
+    $nomG = $_POST['nom_genre'];
+
+
+    $creaAct = ajoutGenre($nomG);
+
+
 }
 
 require('View/AjoutFilmView.php');

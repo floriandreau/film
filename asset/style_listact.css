@@ -1,6 +1,6 @@
 table{
 display: flex;
-justify-content: center;
+
 flex-direction: column;
 margin-left: 40%;
 background-color:  #EAE3CF ;
@@ -12,13 +12,9 @@ background-color:  #EAE3CF ;
 }
 
 .lesacteurs {
-margin-left: 200px;
+margin-left: 250px;
 font-size: 300%;
 font-weight: 700;
-}
-
-.nomacteur, .prenomacteur{
-    margin-left: 20px;
 }
 a{
     font-size: 150%;
@@ -29,8 +25,8 @@ a{
 }
 .nomacteur{
     font-weight: 700;
-    
-
+    margin-right: -30px;
+margin-left: 20px;
 }
 
 .prenomacteur{

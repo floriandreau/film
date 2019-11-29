@@ -1,8 +1,3 @@
-
-*{
-    font-family: 'OSCb';
-}
-
 #realm{
     display: flex;
     justify-content:  flex-end;
@@ -25,10 +20,6 @@ height: auto;
 
 }
 
-.syno{
-    font-size: 150%;
-}
-
 .affichefilmm{
     width: 100px;
     height: auto;
@@ -45,8 +36,6 @@ flex-direction: column;
 align-content: center;
 }
 #titrefilmm {
-    
-
 font-size: 150%;
 font-weight: 700;
 

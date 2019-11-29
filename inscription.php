@@ -59,7 +59,8 @@
   }
 ?>
 
-<div>
+<button class="c3-1 r11-1 gg space_hor style_submit hide" onclick="close_popAuth()" id="close_pop">Annuler</button>
+<div id="pop_insc" class="hide">
 <form method="POST" class="style_form g-container grid-5 rows-12 m-a">
 <input class="c2-3 r8-1 gg space_hor style_input" name="nom" type="text" placeholder="Pseudo"  value="<?php if(isset($nom)){ echo $nom; }?>">
 <input class="c2-3 r9-1 gg space_hor style_input" name="mdp" type="password" placeholder="Mot de passe"  value="<?php if(isset($mdp)){ echo $mdp; }?>">

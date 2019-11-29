@@ -1,31 +1,23 @@
 <?php
 
-$title = "Liste Réalisateurs";
+$title = "";
 include 'header.php';
 
 
 ?>
 
-
-<table> <div id="listfilm">
-    <thead>
-
-    <p class="topfilm">Le Top des films</p>
-
+<table id="blurBody">
     <tbody>
         <?php
-        foreach ($film as $key => $value):
+        foreach ($film as $key => $value) :
             
         
         ?>
     <tr>
         
         
-    
-   
-    
-    <td><a  href="index.php?page=film&id=<?php echo $value['id_film'];?>"> <img class="imgfilm" src="<?php echo $cheminImg.$value['affiche_film'] ?>" alt=""> </a></td>
-    <td><a class="titrefilm"  href="index.php?page=film&id=<?php echo $value['id_film'];?>"> <?php echo $value ['titre_film'] ?></a></td>
+    <td><a href="index.php?page=film&id=<?php echo $value['id_film'];?>"> <img class="imgfilm" src="<?php echo $cheminImg.$value['affiche_film'] ?>" alt=""> </a></td>
+    <td><a class="titrefilm" href="index.php?page=film&id=<?php echo $value['id_film'];?>"> <?php echo $value ['titre_film'] ?></a></td>
     <td><a class="studiofilm" href="index.php?page=film&id=<?php echo $value['id_film'];?>"> <?php echo $value ['studio_film'] ?></a></td>
     <td><a class="datesortiefilm" href="index.php?page=film&id=<?php echo $value['id_film'];?>"> <?php echo $value ['date_sortie_film'] ?></a></td>
     <td><a class="dureefilm" href="index.php?page=film&id=<?php echo $value['id_film'];?>"> <?php echo $value['duree_film'] ?></a></td>
@@ -45,7 +37,6 @@ include 'header.php';
         endforeach;
     ?>
     </tbody>
-    </div>
 </table>
 
 

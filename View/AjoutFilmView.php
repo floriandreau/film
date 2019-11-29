@@ -3,7 +3,7 @@ $title = "";
 include 'header.php';
 ?>
 
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
 
 <input placeholder="titre" type="text" name="titre">
 <input placeholder="duree heure" type="number" name="dureH">
@@ -13,9 +13,22 @@ include 'header.php';
 <input placeholder="Date de sortie (année)" type="number" name="dateA">
 <input placeholder="pegi" type="number" name="pegi">
 <input placeholder="studio" type="text" name="studio">
-<input placeholder="affiche" type="text" name="affiche">
+<input placeholder="affiche" type="file" name="affiche">
 <input placeholder="URL bande annonce" type="text" name="bande">
 <textarea name="syno" id="" cols="30" rows="10" placeholder="Synopsis"></textarea>
+
+<p>Choix Genre</p>
+<select name="Genre" id="">
+<?php
+foreach ($listG as $key => $valuer) {
+    ?>
+    <option value="<?php echo $valuer['id_genre']; ?>"><?php echo $valuer['type_genre']; ?></option>
+    <?php
+}
+?>
+</select>
+<button>Ajouter Genre</button>
+
 <p>Choix acteur</p>
 <select name="Act" id="">
 <?php
@@ -66,6 +79,16 @@ foreach ($listR as $key => $valuer) {
 <button type="submit" name="ajout_real">Ajouter</button>
 
 <button type="submit" name="annul_real">Annuler</button>
+</form>
+
+<!-- ajout genre -->
+<form method="POST">
+<input placeholder="nom" type="text" name="nom_real">
+
+
+<button type="submit" name="ajout_genre">Ajouter</button>
+
+<button type="submit" name="annul_genre">Annuler</button>
 </form>
 
 <?php
