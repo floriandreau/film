@@ -3,6 +3,7 @@
 $title = "";
 include 'header.php';
 
+
 foreach ($ActFilm as $key => $value) {
 
     /* Mise en ordre de la date au bon format (jj/mm/aaaa) */
@@ -12,7 +13,7 @@ foreach ($ActFilm as $key => $value) {
 
 
     ?>
-
+<p>
 
     <div id="acteurm">
         <img class="imgacteurm" src="<?php echo $cheminImg . $value['photo_acteur']; ?>" alt="Photo de <?php echo $value['nom_acteur'] . $value['prenom_acteur']; ?>">
@@ -51,7 +52,7 @@ foreach ($ActFilm as $key => $value) {
 
 
 
-
+</p>
     <?php
         if (isset($_SESSION['role'])) {
             if ($_SESSION['role'] == 1 || $_SESSION['role'] == 2) {

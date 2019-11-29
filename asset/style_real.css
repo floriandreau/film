@@ -21,6 +21,7 @@ height: auto;
 }
 h2{
     font-size: 20px;
+    font-weight: normal;
 }
 .affichefilmm{
     width: 100px;
@@ -46,4 +47,7 @@ font-weight: 700;
     color: black;
  text-decoration: none;
     
+}
+.nomreal,.prenomreal{
+    font-weight: 600;
 }

@@ -44,15 +44,15 @@ foreach ($film as $key => $value) {
     <br>
     <br>
          
-        <p><h2>les acteurs :</h2>
-            <?php
+        <p class="lesacteurs">Les acteurs : </p><br>
+           <p> <?php
             $i=1;
              foreach ($act as $key_act => $value_act) {
                  $acteur = $value_act ['prenom_acteur']." ".$value_act['nom_acteur'];
                  if ($i<count($act)) {
                      ?>
                      
-                     <a href="index.php?page=Act&id=<?php echo $value_act['id_acteur'];?>">Acteur : <?php
+                     <a href="index.php?page=Act&id=<?php echo $value_act['id_acteur'];?>"> <?php
                      echo $acteur.", ";?></a>
                    <?php }
                     else {
