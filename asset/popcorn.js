@@ -18,22 +18,31 @@ var Engine = Matter.Engine,
 // Create an engine
 var engine = Engine.create();
 
-// Create a renderer
+// // Create a renderer
 var render = Render.create({
   element: document.body,
   engine: engine,
   options: {
     showAngleIndicator: false,
     wireframes: false,
-    background: "#f7f7f8",
-    width: width,
-    height: height,
+    background: "none",
     showAngleIndicator: false,
     showCollisions: false,
     showInternalEdges: false,
-    showVelocity: false
+    showVelocity: false,
+    position: "absolute",
+    top: 0,
+    left: 0
   }
 });
+let canvas = document.getElementsByTagName('canvas');
+
+canvas.style.position = "absolute";
+canvas.style.width = "100vw";
+canvas.style.height = "100vh";
+canvas.style.top = "0";
+canvas.style.zIndex = "100";
+
 
 // Add container walls
 World.add(engine.world, [
@@ -313,3 +322,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
     World.add(engine.world, corn());
   }, 200);
 });
+
