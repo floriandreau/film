@@ -195,7 +195,7 @@ const influencer = Bodies.circle(width / 2, height / 2, 10, {
 World.add(engine.world, influencer);
 
 // Add a mouse controller
-const mouse = Mouse.create(render.canvas);
+const mouse = Mouse.create(render.film);
 
 // Define what happens when the mouse moves
 Matter.Events.on(engine, "afterUpdate", function() {
