@@ -9,8 +9,9 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="//developers.lucasvandenberg.fr/smaltify/import/css/smalt.css">
+    <link rel="icon" href="asset/elements/logo_popficta.png"/>
     <link rel="stylesheet" href="asset/style.css">
-    <title>POP FICTA<?php echo $title ?></title>
+    <title>POP FICTA | <?php echo $title ?></title>
 </head>
 <body>
 
@@ -46,7 +47,28 @@ session_start();
         <?php
             if (isset($_SESSION['pseudo'])) {
         ?>
-            <p class="style_user space"><?php echo $_SESSION['pseudo'];?></p>
+        <div class="ticket space">
+        
+           <p class="style_user"><?php echo $_SESSION['pseudo'];?></p> 
+        </div>
+
+
+
+        <!-- Code pour chnager le fond du pseudo en fonction du role utilisateur-->
+        <?php/* if (isset($_SESSION["role"])) {
+            if ($_SESSION["role"]==0) {
+                echo "ticket";
+            }
+            if ($_SESSION["role"]==1) {
+                echo "ticket_admin";
+            }
+            if ($_SESSION["role"]==2) {
+                echo "ticket_supera";
+            }
+        } */?>   
+            
+
+
         <?php
             require('deconnection.php');
             }
