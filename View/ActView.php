@@ -14,37 +14,37 @@ foreach ($ActFilm as $key => $value) {
     ?>
 
 
-    <div id="acteurm blurBody">
+    <div id="acteurm">
         <img class="imgacteurm" src="<?php echo $cheminImg . $value['photo_acteur']; ?>" alt="Photo de <?php echo $value['nom_acteur'] . $value['prenom_acteur']; ?>">
         <div id="infoacteurm">
             <p>
-
-                <h3><?php echo $value['nom_acteur'] . " " . $value['prenom_acteur']; ?></h3>
+<br>
+                <h3><?php echo $value['nom_acteur'] . " " . $value['prenom_acteur']; ?><br></h3>
             </p>
+<br>
+           <p> <h2>Age : <?php echo $value['age_acteur'] . " "; ?> ans</h2></p>
 
-            <h2>Age : <?php echo $value['age_acteur'] . " "; ?> ans</h2>
-
-
+<br>
 
 
             <h2>Nationalité : <?php echo $value['nationalite_acteur']; ?></h2>
             <p>
-
+<br>
             </p>
 
             <div>
-                <h2>Filmographie : </h2>
-                <a href="index.php?page=film&id=<?php echo $value['id_film']; ?>">
-                    <img class="affichefilmm" src="<?php echo $cheminImg . $value['affiche_film']; ?>" alt="Affiche du film <?php echo $value['titre_film']; ?>">
-                </a>
-                <div id="titrefilmm">
+                <h2>Filmographie : </h2><br> <div id="titrefilmm">
                     <p><a class="titrefilmm" href="index.php?page=film&id=<?php echo $value['id_film']; ?>">
-                            <?php echo $value['titre_film']  ?></a></p>
+                            <?php echo $value['titre_film']  ?></a></p><br>
 
                 </div>
+                <a href="index.php?page=film&id=<?php echo $value['id_film']; ?>">
+                    <img class="affichefilmm" src="<?php echo $cheminImg . $value['affiche_film']; ?>" alt="Affiche du film <?php echo $value['titre_film']; ?>">
+                </a><br><br>
+               
 
 
-                <p><?php echo $newDate; ?></p>
+                <p>Date de sortie : <?php echo $newDate; ?></p>
             </div>
         </div>
     </div>
