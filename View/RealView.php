@@ -15,23 +15,23 @@ foreach ($real as $key => $value) {
 <div id="inforealm">
     
        <h3><?php
-     echo $value['nom_real'].$value['prenom_real'];
-        ?></h3> 
+     echo $value['nom_real'].'.'.$value['prenom_real'];
+        ?></h3> <br>
     
     <h2>Age : <?php echo $value['age_real']." "; ?> ans</h2>
-    
+    <br>
     
     <h2>Nationalité : <?php echo $value['nationalite_real']; ?></h2>
-    
+    <br><br>
     
     <div>
-        <h2>Filmographie</h2>
+        <h2>Filmographie : </h2><br><div id="titrefilmm">
+            <p><?php echo $value ['titre_film']?>
+        </div><br>
         <a href="index.php?page=film&id=<?php echo $value['id_film']; ?>">
         <img class="affichefilmm" src="<?php echo $cheminImg.$value['affiche_film'];?>" alt="affiche du film <?php echo $value['titre_film']; ?>">
-        <div id="titrefilmm">
-            <p><?php echo $value ['titre_film']?>
-        </div>
-    <?php
+        <br><br>
+    Date de sortie : <?php
     echo $newDate;?>
  </div>  </div>
 

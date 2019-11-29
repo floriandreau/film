@@ -11,7 +11,7 @@ include 'header.php';
 </p>
 
 
-<table>
+<table id="blurBody">
 
     <thead>
 
@@ -41,5 +41,13 @@ include 'header.php';
 
 
 <?php
+
+if (isset($_SESSION['role'])) {
+    if ($_SESSION['role'] = 1 || $_SESSION['role'] = 2) {
+        ?>
+<a href="index.php?page=AjoutAct">Ajouter</a>
+        <?php
+    }
+}
 
 include 'footer.php';

@@ -133,38 +133,8 @@ h1{
     color: white;
     text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
     text-transform: uppercase;
-    
-    // text-align: center;
-    // display: flex;
-    // align-self: center;
+
 }
-
-.ticket{
-    background: url(elements/ticket_user.png) round; 
-    height: 30%;
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-// .ticket_admin{
-//     background: url(elements/ticket_admin.png) round; 
-//     height: 70%;
-//     width: 70%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-
-// .ticket_supera{
-//     background: url(elements/ticket_superadmin.png) round; 
-//     height: 60%;
-//     width: 50%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
 
 .style_form{
     z-index: 1000;
@@ -175,7 +145,7 @@ h1{
 
 .style_input{
     // border-radius: 5px;
-    text-transform: uppercase;  
+    text-transform: uppercase;
     font-family: 'OSCb';
     font-size: 14px;
 }

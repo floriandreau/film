@@ -58,6 +58,7 @@
       }
   }
 ?>
+<button class="c3-1 r11-1 gg space_hor style_submit hide" onclick="close_popAuth()" id="close_pop">Annuler</button>
 
 <div>
 <form method="POST" class="style_form g-container grid-5 rows-12 m-a cache">

@@ -5,8 +5,8 @@ include 'header.php';
 
 
 ?>
-<div id="listreal"></div>
-<table id="listreale">
+<div id="listreal blurBody"></div>
+<table id="listreale blurBody">
     <thead>
 <p class="lesreal">Les Réalisateurs</p>
     <!-- <th>Nom</th>

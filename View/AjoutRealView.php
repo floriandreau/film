@@ -6,13 +6,13 @@ include 'header.php';
 
 ?>
 
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
 
 <input placeholder="nom" type="text" name="nom">
 <input placeholder="prenom" type="text" name="prenom">
 <input placeholder="age" type="number" name="age">
 <input placeholder="nationalite" type="text" name="nation">
-<input placeholder="photo" type="text" name="photo">
+<input placeholder="affiche" type="file" name="affiche">
 
 <button type="submit" name="ajout">Ajouter</button>
 

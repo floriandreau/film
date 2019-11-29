@@ -9,8 +9,8 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="//developers.lucasvandenberg.fr/smaltify/import/css/smalt.css">
-    <link rel="stylesheet" href="asset/style_acteur.css">
+   <link rel="stylesheet" href="//developers.lucasvandenberg.fr/smaltify/import/css/smalt.css"> 
+   <link rel="stylesheet" href="asset/style_acteur.css">
     <link rel="stylesheet" href="asset/style_listact.css">
     <link rel="stylesheet" href="asset/style_listreal.css">
     <link rel="stylesheet" href="asset/style_real.css">
@@ -19,12 +19,13 @@ session_start();
     <link rel="stylesheet" href="asset/style.css">
     <link rel="stylesheet" href="asset/style_carousel.css">
     <link rel="stylesheet" href="asset/animpop.css">
+    <link rel="stylesheet" href="asset/style_listfilm.css">
     <title>POP FICTA | <?php echo $title ?></title>
 </head>
 
 <body>
 
-    <header class="g-container grid-12 rows-3 m-a">
+    <header class="g-container grid-12 rows-3 m-a" id="blurHead">
 
         <nav class="c1-4 r2-1 gg">
             <ul class="ligne">
@@ -32,6 +33,8 @@ session_start();
                 <li class="none"><a href="index.php?page=ListAct">Acteurs</a></li>
                 <li class="none"><a href="index.php?page=ListReal">Réalisateurs</a></li>
                 <?php
+    
+    
 
                 if (isset($_SESSION['role'])) {
                     if ($_SESSION['role'] == 1 || $_SESSION['role'] == 2) {
@@ -83,8 +86,8 @@ session_start();
             } else {
                 ?>
                 <!-- <div class="c10-3 r2-1 gg"> -->
-                <button class="signup space style_btn">Connection</button>
-                <button class="signin style_btn">Inscription</button>
+                <button onclick="popCo()" class="signup space style_btn">Connection</button>
+                <button onclick="popInsc()" class="signin style_btn">Inscription</button>
                 <!-- </div> -->
             <?php
             }
