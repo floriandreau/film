@@ -1,22 +1,8 @@
 <?php
-$title = "Liste Réalisateurs";
+$title = "";
 include 'header.php';
 
-if (isset($_POST['ajout'])) {
 
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $age = $_POST['age'];
-    $nation = $_POST['nation'];
-    $photo = $_POST['photo'];
-
-    $ajout = $dbh->prepare("INSERT INTO realisateur (nom_real, prenom_real, age_real, nationalite_real, photo_real) VALUES (?, ?, ?, ?, ?)");
-    $ajout->execute(array($nom, $prenom, $age, $nation, $photo));
-    header('Location: index.php?page=ListReal');
-}
-if (isset($_POST['annul'])) {
-    header('Location: index.php?page=ListReal');
-}
 
 ?>
 

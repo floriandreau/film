@@ -5,16 +5,13 @@ include 'header.php';
 
 
 ?>
-
-<p>
-    Liste Reals
-</p>
-<table>
+<div id="listreal"></div>
+<table id="listreale">
     <thead>
-
-    <th>Nom</th>
+<p class="lesreal">Les Réalisateurs</p>
+    <!-- <th>Nom</th>
     <th>Prénom</th>
-    <th>Age</th>
+    <th>Age</th> -->
     <?php
         if (isset($_SESSION['role'])) {
             if ($_SESSION['role'] = 1 || $_SESSION['role'] = 2) {
@@ -31,8 +28,8 @@ include 'header.php';
         ?>
     <tr>
         
-    <td><a href="index.php?page=real&id=<?php echo $value['id_real'];?>"><img src="<?php echo $cheminImg.$value ['photo_real'] ?>" alt=""> </a></td>
-    <td><a href="index.php?page=real&id=<?php echo $value['id_real'];?>"> <?php echo $value ['nom_real'] ?></a></td>
+    <td><a href="index.php?page=real&id=<?php echo $value['id_real'];?>"><img class="photoreal" src="<?php echo $cheminImg.$value ['photo_real'] ?>" alt=""> </a></td>
+    <td><a class="nomreal" href="index.php?page=real&id=<?php echo $value['id_real'];?>"> <?php echo $value ['nom_real'] ?></a></td>
     <td><a href="index.php?page=real&id=<?php echo $value['id_real'];?>"> <?php echo $value['prenom_real'] ?></a></td>
     <?php
         if (isset($_SESSION['role'])) {
