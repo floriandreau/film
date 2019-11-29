@@ -1,8 +1,9 @@
 
     
     .imgfilm{
-       height: auto;
-        width: 200px; 
+      height: auto;
+      width: 200px; 
+      margin-left: -100px;
         
     }
     
@@ -16,14 +17,18 @@
         text-decoration: none;
     }
 
-  .titrefilm,.dureefilm, .studiofilm{
+  .titrefilm,.dureefilm, .studiofilm, .datesortiefilm{
 
-margin-left: 30px;
-
-
-
+margin-left: 20px;
 
   }
+  .videofilm{
+width: 400px;
+height: 200px;
+
+  }
+
+
   tr{
       display: flex;
       

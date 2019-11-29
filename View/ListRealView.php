@@ -29,7 +29,7 @@ include 'header.php';
     <tr>
         
     <td><a href="index.php?page=real&id=<?php echo $value['id_real'];?>"><img class="photoreal" src="<?php echo $cheminImg.$value ['photo_real'] ?>" alt=""> </a></td>
-    <td><a class="nomreal" href="index.php?page=real&id=<?php echo $value['id_real'];?>"> <?php echo $value ['nom_real'] ?></a></td>
+    <td><a class="nomreal" href="index.php?page=real&id=<?php echo $value['id_real'];?>"> <?php echo $value ['nom_real'].'.' ?></a></td>
     <td><a href="index.php?page=real&id=<?php echo $value['id_real'];?>"> <?php echo $value['prenom_real'] ?></a></td>
     <?php
         if (isset($_SESSION['role'])) {

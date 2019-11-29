@@ -100,19 +100,19 @@ Age conseillé : <?php echo $value['pegi_film']; ?> ans et +
 </p>
 
 <div>
-
-
-</div>
-
-</div>
-</div>
+<br>
 <?php 
 $video = explode('/', $value['bande_film']);
 $watch = explode('=', $video[3]);
 $newVideo = $video[0]."//".$video[2]."/embed"."/".$watch[1];
 ?>
 
-<iframe src="<?php echo $newVideo; ?>"></iframe>
+<iframe class="videofilm"src="<?php echo $newVideo; ?>"></iframe>
+</div>
+
+</div>
+</div>
+
 <?php
 }
 include 'footer.php';

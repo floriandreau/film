@@ -15,7 +15,7 @@ foreach ($real as $key => $value) {
 <div id="inforealm">
     
        <h3><?php
-     echo $value['nom_real'].''.$value['prenom_real'];
+     echo $value['nom_real'].'.'.$value['prenom_real'];
         ?></h3> <br>
     
     <h2>Age : <?php echo $value['age_real']." "; ?> ans</h2>
