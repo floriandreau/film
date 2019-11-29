@@ -51,7 +51,7 @@ if(!empty($_POST)){
 ?>
 
 <div>
-<form class="style_form g-container grid-5 rows-12 m-a" method="POST">
+<form class="style_form g-container grid-5 rows-12 m-a test" method="POST">
 <?php
     if (isset($er_nom_co)){
 ?>
