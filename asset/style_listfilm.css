@@ -7,11 +7,7 @@
         
     }
     
-    .lesreal{
-    margin-left: 100px;
-    font-size: 300%;
-    font-weight: 700;
-    }
+   
     a{
         color: black;
         text-decoration: none;
@@ -19,7 +15,7 @@
 
   .titrefilm,.dureefilm, .studiofilm, .datesortiefilm{
 
-margin-left: 20px;
+margin-left: 5px;
 
   }
   .videofilm{
@@ -31,8 +27,12 @@ height: 200px;
 
   tr{
       display: flex;
-      
+      /* justify-content: space-around; */
       align-items: center;
+      width: 100%;
+  }
+  td{
+    margin-left: 20px;
   }
   .titrefilm{
       font-style: normal;
@@ -44,9 +44,7 @@ height: 200px;
     font-style: italic;
      
   }
+  
+   
 
-  .topfilm{
-      font-weight: 700;
-      margin-left: 100px;
-      font-size: 300%;
-  }
+

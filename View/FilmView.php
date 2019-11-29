@@ -44,14 +44,15 @@ foreach ($film as $key => $value) {
     <br>
     <br>
          
-        <p>
-            <?php
+        <p class="lesacteurs">Les acteurs : </p><br>
+           <p> <?php
             $i=1;
              foreach ($act as $key_act => $value_act) {
-                 $acteur = $value_act['prenom_acteur']." ".$value_act['nom_acteur'];
+                 $acteur = $value_act ['prenom_acteur']." ".$value_act['nom_acteur'];
                  if ($i<count($act)) {
                      ?>
-                     <a href="index.php?page=Act&id=<?php echo $value_act['id_acteur'];?>">Acteur : <?php
+                     
+                     <a href="index.php?page=Act&id=<?php echo $value_act['id_acteur'];?>"> <?php
                      echo $acteur.", ";?></a>
                    <?php }
                     else {
@@ -70,12 +71,13 @@ foreach ($film as $key => $value) {
                  $realisateur = $value_real['prenom_real']." ".$value_real['nom_real'];
                  if ($i<count($real)) {
                      ?> 
-                  <a href="index.php?page=real&id=<?php echo $value_real['id_real'];?>"> <?php echo $realisateur.", ";?></a> 
+                    <a href="index.php?page=real&id=<?php echo $value_real['id_real'];?>"><?php echo $realisateur.", ";?></a>
+                 
                      <?php
                   }
                     else {
                         ?> 
-                        <a href="index.php?page=real&id=<?php echo $value_real['id_real'];?>">Réalisateur : <?php echo $realisateur;?></a>
+                        <a href="index.php?page=real&id=<?php echo $value_real['id_real'];?>"> Les réalisateurs : <?php echo $realisateur;?></a>
                         <?php                    }
                     $i++;
             }

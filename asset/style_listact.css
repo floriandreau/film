@@ -25,11 +25,18 @@ a{
 }
 .nomacteur{
     font-weight: 700;
-    margin-right: -30px;
-margin-left: 20px;
+    margin-right: 10px;
+
 }
 
 .prenomacteur{
     font-weight: 700;
 
 }
+.tdact{
+    width: 250px;
+    
+    
+}
+.nomacteur, .prenomacteur{
+font-weight: 600;}

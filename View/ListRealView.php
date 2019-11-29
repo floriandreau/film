@@ -8,6 +8,7 @@ include 'header.php';
 <div id="listreal blurBody"></div>
 <table id="listreale blurBody">
     <thead>
+        <br>
 <p class="lesreal">Les Réalisateurs</p>
     <!-- <th>Nom</th>
     <th>Prénom</th>
@@ -30,7 +31,7 @@ include 'header.php';
         
     <td><a href="index.php?page=real&id=<?php echo $value['id_real'];?>"><img class="photoreal" src="<?php echo $cheminImg.$value ['photo_real'] ?>" alt=""> </a></td>
     <td><a class="nomreal" href="index.php?page=real&id=<?php echo $value['id_real'];?>"> <?php echo $value ['nom_real'] ?></a></td>
-    <td><a href="index.php?page=real&id=<?php echo $value['id_real'];?>"> <?php echo $value['prenom_real'] ?></a></td>
+    <td><a class="prenomreal" href="index.php?page=real&id=<?php echo $value['id_real'];?>"> <?php echo $value['prenom_real'] ?></a></td>
     <?php
         if (isset($_SESSION['role'])) {
             if ($_SESSION['role'] = 1 || $_SESSION['role'] = 2) {

@@ -38,7 +38,7 @@ include 'header.php';
     ?>
     </tbody>
 </table>
-
+</p>
 
 <?php
 
