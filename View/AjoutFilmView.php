@@ -17,7 +17,10 @@ include 'header.php';
 <input placeholder="URL bande annonce" type="text" name="bande">
 <textarea name="syno" id="" cols="30" rows="10" placeholder="Synopsis"></textarea>
 
+
+<!-- Créer un nouv choix de genre -->
 <p>Choix Genre</p>
+<div id="ChoixGenre">
 <select name="Genre" id="">
 <?php
 foreach ($listG as $key => $valuer) {
@@ -27,9 +30,15 @@ foreach ($listG as $key => $valuer) {
 }
 ?>
 </select>
+</div>
+<button onclick="plusGenre()">Plus</button>
 <button>Ajouter Genre</button>
 
+
+<!-- Créer un nouv choix de acteur -->
+
 <p>Choix acteur</p>
+<div id="ChoixAct">
 <select name="Act" id="">
 <?php
 foreach ($listA as $key => $value) {
@@ -39,8 +48,15 @@ foreach ($listA as $key => $value) {
 }
 ?>
 </select>
+</div>
+<button onclick="plusAct()">Plus</button>
 <button>Ajouter Acteur</button>
+
+
+<!-- Créer un nouv choix de realisateur -->
+
 <p>Choix Realisateur</p>
+<div id="ChoixReal">
 <select name="Rea" id="">
 <?php
 foreach ($listR as $key => $valuer) {
@@ -50,7 +66,10 @@ foreach ($listR as $key => $valuer) {
 }
 ?>
 </select>
+</div>
+<button onclick="plusReal()">Plus</button>
 <button>Ajouter Realisateur</button>
+
 
 <button type="submit" name="ajout">Ajouter</button>
 
