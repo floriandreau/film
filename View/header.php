@@ -1,9 +1,10 @@
 <?php
-session_start();
+session_start();    
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,61 +15,85 @@ session_start();
     <link rel="stylesheet" href="asset/style_listreal.css">
     <link rel="stylesheet" href="asset/style_real.css">
     <link rel="stylesheet" href="asset/style_film.css">
-    <link rel="stylesheet" href="asset/style_listfilm.css">
-    
-    
+    <link rel="icon" href="asset/elements/logo_popficta.png" />
     <link rel="stylesheet" href="asset/style.css">
-    <title>POP FICTA<?php echo $title ?></title>
+    <link rel="stylesheet" href="asset/style_carousel.css">
+    <link rel="stylesheet" href="asset/animpop.css">
+    <link rel="stylesheet" href="asset/style_listfilm.css">
+    <title>POP FICTA | <?php echo $title ?></title>
 </head>
-<body >
 
-<header class="g-container grid-12 rows-3 m-a" id="blurHead">
+<body>
 
-    <nav class="c1-4 r2-1 gg">
-    <ul class="ligne">
-        <li class="none"><a href="index.php?page=ListFilm">Films</a></li>
-        <li class="none"><a href="index.php?page=ListAct">Acteurs</a></li>
-        <li class="none"><a href="index.php?page=ListReal">Réalisateurs</a></li>
-    <?php
- 
-    if (isset($_SESSION['role'])) {
-        if ($_SESSION['role'] == 1 || $_SESSION['role'] == 2) {
-            
-    ?>
-    <li>
-    <a href="index.php?page=ListUser">User</a>
-    </li>
-    <?php
-        }
-    }
-    ?>
-    </ul>
-    </nav>
+    <header class="g-container grid-12 rows-3 m-a" id="blurHead">
+
+        <nav class="c1-4 r2-1 gg">
+            <ul class="ligne">
+                <li class="none"><a href="index.php?page=ListFilm">Films</a></li>
+                <li class="none"><a href="index.php?page=ListAct">Acteurs</a></li>
+                <li class="none"><a href="index.php?page=ListReal">Réalisateurs</a></li>
+                <?php
+    
+    
+
+                if (isset($_SESSION['role'])) {
+                    if ($_SESSION['role'] == 1 || $_SESSION['role'] == 2) {
+
+                        ?>
+                        <li>
+                            <a href="index.php?page=ListUser">User</a>
+                        </li>
+                <?php
+                    }
+                }
+                ?>
+            </ul>
+        </nav>
 
 
-    <h1 class="c6-3 r2-1 gg"><a href="index.php"><img src="asset/elements/popficta.png" class="logo" alt="logo"></a></h1>
+        <h1 class="c6-3 r2-1 gg"><a href="index.php"><img src="asset/elements/popficta.png" class="logo" alt="logo"></a></h1>
 
 
-    <div class="c10-3 r2-1 gg">
+        <div class="c10-3 r2-1 gg">
 
-        <?php
+            <?php
             if (isset($_SESSION['pseudo'])) {
-        ?>
-            <p class="style_user space"><?php echo $_SESSION['pseudo'];?></p>
-        <?php
-            require('deconnection.php');
-            }
-            else{
-        ?>
-            <!-- <div class="c10-3 r2-1 gg"> -->
-            <button onclick="popCo()" class="signup space style_btn">Connection</button>
-            <button onclick="popInsc()" class="signin style_btn">Inscription</button>
-            <!-- </div> -->
-        <?php
-            }
-        ?>
-    </div>
-</header>
+                ?>
+                <div class="ticket space">
 
-<?php require('inscription.php') ?>
-<?php require('connection.php') ?>
+                    <p class="style_user"><?php echo $_SESSION['pseudo']; ?></p>
+                </div>
+
+
+
+                <!-- Code pour chnager le fond du pseudo en fonction du role utilisateur-->
+                <? php/* if (isset($_SESSION["role"])) {
+            if ($_SESSION["role"]==0) {
+                echo "ticket";
+            }
+            if ($_SESSION["role"]==1) {
+                echo "ticket_admin";
+            }
+            if ($_SESSION["role"]==2) {
+                echo "ticket_supera";
+            }
+        } */ ?>
+
+
+
+            <?php
+                require('deconnection.php');
+            } else {
+                ?>
+                <!-- <div class="c10-3 r2-1 gg"> -->
+                <button onclick="popCo()" class="signup space style_btn">Connection</button>
+                <button onclick="popInsc()" class="signin style_btn">Inscription</button>
+                <!-- </div> -->
+            <?php
+            }
+            ?>
+        </div>
+    </header>
+
+    <?php require('inscription.php') ?>
+    <?php require('connection.php') ?>
