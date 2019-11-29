@@ -50,13 +50,14 @@ ul{
 li{
     margin: 0 2%;
     font-family: 'OSCb';
-    font-size: 20px;
+    
     color: $secondColor;
     text-transform: uppercase; 
 }
 
 li > a{
     color: $secondColor;
+    font-size: 20px;
 }
 .ligne{
     display: flex;
@@ -185,3 +186,6 @@ h1{
     font-size: 14px;
 }
 
+.cache{
+    display: none;
+}
