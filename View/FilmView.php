@@ -21,9 +21,10 @@ foreach ($film as $key => $value) {
 <div id="synopsisfilm">
 <p id="titrefilmm">
 <?php echo $value['titre_film']?></p>
-
+<br>
 
 <p><?php echo $newDate; ?></p>
+<br>
 <?php 
      $i=1;
      foreach ($genre as $key_genre => $value_genre) {
@@ -40,7 +41,8 @@ foreach ($film as $key => $value) {
     }
     ?>
     
-     
+    <br>
+    <br>
          
         <p>
             <?php
@@ -49,11 +51,11 @@ foreach ($film as $key => $value) {
                  $acteur = $value_act['prenom_acteur']." ".$value_act['nom_acteur'];
                  if ($i<count($act)) {
                      ?>
-                     <a href="index.php?page=Act&id=<?php echo $value_act['id_acteur'];?>"><?php
+                     <a href="index.php?page=Act&id=<?php echo $value_act['id_acteur'];?>">Acteur : <?php
                      echo $acteur.", ";?></a>
                    <?php }
                     else {
-                      ?>  <a href="index.php?page=Act&id=<?php echo $value_act['id_acteur'];?>"><?php
+                      ?>  <a href="index.php?page=Act&id=<?php echo $value_act['id_acteur'];?>"> <?php
                      echo $acteur;?></a><?php
                     }
                     $i++;
@@ -61,38 +63,38 @@ foreach ($film as $key => $value) {
 
   
         </p>
-
+        <br>
         <?php
             $i=1;
              foreach ($real as $key_real => $value_real) {
                  $realisateur = $value_real['prenom_real']." ".$value_real['nom_real'];
                  if ($i<count($real)) {
                      ?> 
-                     <a href="index.php?page=real&id=<?php echo $value_real['id_real'];?>"><?php echo $realisateur.", ";?></a>
+                  <a href="index.php?page=real&id=<?php echo $value_real['id_real'];?>"> <?php echo $realisateur.", ";?></a> 
                      <?php
                   }
                     else {
                         ?> 
-                        <a href="index.php?page=real&id=<?php echo $value_real['id_real'];?>"><?php echo $realisateur;?></a>
+                        <a href="index.php?page=real&id=<?php echo $value_real['id_real'];?>">Réalisateur : <?php echo $realisateur;?></a>
                         <?php                    }
                     $i++;
             }
             
     ?>
     
-        
+        <br>
     
-<p><?php echo $value['duree_film'];
+<p>Durée : <?php echo $value['duree_film'];
 
 
 
 ?></p>
 
 <p>
-<?php echo $value['pegi_film']; ?> ans et +
+Age conseillé : <?php echo $value['pegi_film']; ?> ans et +
 </p>
-
-<h2>Synopsis</h2>
+<br>
+<p class="syno">Synopsis</p><br>
 <p>
 <?php echo $value['synopsis_film']; ?>
 </p>

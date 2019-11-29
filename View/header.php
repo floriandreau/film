@@ -14,7 +14,7 @@ session_start();
     <link rel="stylesheet" href="asset/style_listreal.css">
     <link rel="stylesheet" href="asset/style_real.css">
     <link rel="stylesheet" href="asset/style_film.css">
-    
+    <link rel="stylesheet" href="asset/style_listfilm.css">
     
     <link rel="stylesheet" href="asset/style.css">
     <title>POP FICTA<?php echo $title ?></title>
