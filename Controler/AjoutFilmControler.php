@@ -33,20 +33,37 @@ if (isset($_POST['ajout'])) {
 
     if (move_uploaded_file($_FILES['affiche']['tmp_name'], $cheminImg.$image)) {
         
-        $creaReal = ajoutFilm($titre,  $dure, $date, $pegi, $studio, $image, $bande,$syno);
-        
         $idFILM = $id_Film + 1;
         
+        $creaReal = ajoutFilm($titre,  $dure, $date, $pegi, $studio, $image, $bande,$syno);
+        
         $idReal = $_POST['Rea'];
+        $ajoutReal = lienFR($idReal, $idFILM);
+        $idReal = $_POST['Rea1'];
+        $ajoutReal = lienFR($idReal, $idFILM);
+        $idReal = $_POST['Rea2'];
         $ajoutReal = lienFR($idReal, $idFILM);
         
         $idAct = $_POST['Act'];
         $ajoutAct = lienFA($idAct, $idFILM);
-
+        $idAct = $_POST['Act1'];
+        $ajoutAct = lienFA($idAct, $idFILM);
+        $idAct = $_POST['Act2'];
+        $ajoutAct = lienFA($idAct, $idFILM);
+        $idAct = $_POST['Act3'];
+        $ajoutAct = lienFA($idAct, $idFILM);
+        $idAct = $_POST['Act4'];
+        $ajoutAct = lienFA($idAct, $idFILM);
         // lien genre film
-        $idAct = $_POST['Genre'];
+        $idGenre = $_POST['Genre'];
         $ajoutGenre = lienFG($idGenre, $idFILM);
-        
+
+        $idGenre = $_POST['Genre1'];
+        $ajoutGenre = lienFG($idGenre, $idFILM);
+
+        $idGenre = $_POST['Genre2'];
+        $ajoutGenre = lienFG($idGenre, $idFILM);
+
     }
     
 
@@ -75,17 +92,12 @@ if (isset($_POST['ajout_real'])) {
     $photoR = $_POST['photo_real'];
 
     $creaAct = ajoutReal($nomR, $prenomR, $ageR, $nationR, $photoR);
-
-
 }
 
 if (isset($_POST['ajout_genre'])) {
     $nomG = $_POST['nom_genre'];
 
-
     $creaAct = ajoutGenre($nomG);
-
-
 }
 
 require('View/AjoutFilmView.php');

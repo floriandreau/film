@@ -33,12 +33,10 @@ include 'header.php';
                     if (isset($_SESSION['role'])) {
                         if ($_SESSION['role'] = 1 || $_SESSION['role'] = 2) {
                             ?>
-                        <td class="taillecase-ajout-suppr"><a class="ajout-suppr" href="index.php?page=suppAct&id=<?php echo $value['id_film']; 
-                        ?>">Supprimer</a></td>
+                        <td class="taillecase-ajout-suppr"><a class="ajout-suppr" href="index.php?page=suppAct&id=<?php echo $value['id_acteur']; ?>">Supprimer</a></td>
                 <?php
                         }
                     }
-                    include 'footer.php';
                     ?>
 
             </tr>
@@ -49,3 +47,5 @@ include 'header.php';
     </tbody>
 
 </table>
+<?php
+        include 'footer.php';

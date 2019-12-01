@@ -57,6 +57,7 @@ $ModUser = $dbh->prepare("DELETE FROM `utilisateur` WHERE id_utilisateur={$_POST
             <select name="roleUser">
                 <option value="<?php echo $value['role_utilisateur'];?>">0</option>
                 <option value="1">1</option>
+                <option value="2">2</option>
             </select>
             <button name="ModifUser" type="submit">Modifier</button>
         </form>
