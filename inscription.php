@@ -58,7 +58,8 @@
       }
   }
 ?>
-<button class="c3-1 r11-1 gg space_hor style_submit hide" onclick="close_popAuth()" id="close_pop">Annuler</button>
+
+<img src="asset/elements/croix.png" class="gg space_hor style_submit style-croix hide" onclick="close_popAuth()" id="close_pop" alt="bouton annuler">
 
 <div id="pop_insc" class="hide">
 <form method="POST" class="style_form g-container grid-5 rows-12 m-a">

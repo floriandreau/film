@@ -1,53 +1,51 @@
 <?php
-
 $title = "Liste Acteurs";
 include 'header.php';
-
-
 ?>
 
-<p>
-
-</p>
-
-
-<table id="blurBody">
-
-    <thead>
-<br>
-    <p class="lesacteurs">Les Acteurs</p>
-        
-    </thead>
-
+<h2 class="title-rubrique">Les Acteurs</h2>
+<table class="latable" id="blurBody">
     <tbody>
+        <?php
+        foreach ($Acts as $key => $value) :
+            ?>
+            <tr>
 
-    <?php
-    foreach ($Acts as $key => $value) :
-    ?>
-    <tr>
+                <td class="taillecase-img"><a href="index.php?page=Act&id=<?php echo $value['id_acteur']; ?>"><img class="imgfilm" 
+                src="<?php echo $cheminImg . $value['photo_acteur']; ?>" alt=""></a></td>
 
-        <td class="tdact"><a  href="index.php?page=Act&id=<?php echo $value['id_acteur']; ?>"><img class="photoacteur" src="<?php echo $cheminImg.$value['photo_acteur']; ?>" alt=""></a></td>
-        <td ><a class="nomacteur" href="index.php?page=Act&id=<?php echo $value['id_acteur']; ?>"><?php echo $value['nom_acteur']; ?></a></td>
-        <td><a class="prenomacteur" href="index.php?page=Act&id=<?php echo $value['id_acteur']; ?>"><?php echo $value['prenom_acteur']; ?></a></td>
+                <td class="taillecase-act"><a class="titrefilm" href="index.php?page=Act&id=<?php echo $value['id_acteur']; ?>"><?php echo $value['prenom_acteur']; ?></a></td>
 
-    </tr>
-<?php
-    endforeach;
-?>
+                <td class="taillecase-act"><a class="titrefilm" href="index.php?page=Act&id=<?php echo $value['id_acteur']; ?>"><?php echo $value['nom_acteur']; ?></a></td>
+
+                <?php
+                    if (isset($_SESSION['role'])) {
+                        if ($_SESSION['role'] = 1 || $_SESSION['role'] = 2) {
+                            ?>
+                        <td class="taillecase-ajout-suppr2"><a class="ajout-suppr" href="index.php?page=AjoutAct">Ajouter</a></td>
+                <?php
+                        }
+                    }
+
+                    ?>
+
+                <?php
+                    if (isset($_SESSION['role'])) {
+                        if ($_SESSION['role'] = 1 || $_SESSION['role'] = 2) {
+                            ?>
+                        <td class="taillecase-ajout-suppr"><a class="ajout-suppr" href="index.php?page=suppAct&id=<?php echo $value['id_film']; 
+                        ?>">Supprimer</a></td>
+                <?php
+                        }
+                    }
+                    include 'footer.php';
+                    ?>
+
+            </tr>
+        <?php
+        endforeach;
+        ?>
 
     </tbody>
 
 </table>
-
-
-<?php
-
-if (isset($_SESSION['role'])) {
-    if ($_SESSION['role'] = 1 || $_SESSION['role'] = 2) {
-        ?>
-<a href="index.php?page=AjoutAct">Ajouter</a>
-        <?php
-    }
-}
-
-include 'footer.php';

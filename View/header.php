@@ -23,7 +23,24 @@ session_start();
     <title>POP FICTA | <?php echo $title ?></title>
 </head>
 
-<body>
+<body> 
+<!-- <script>
+        let gif = document.createElement("div");
+        document.body.appendChild(gif);
+        gif.style = "width: 100%; height: 100%; position: absolute; display: flex; justify-content: center; align-items: center; top: 0; left: 0; z-index: 9999; background-color: white; transition: all 0.5s ease-in-out; opacity: 0.1;"
+        let image = document.createElement("img");
+        gif.appendChild(image);
+        image.src = "asset/elements/load.svg";
+        image.style = "height: 126px; width: 229px;";
+        window.addEventListener("load", function() {
+            setTimeout(function(){
+                gif.style.opacity = "0";
+                setTimeout(function(){
+                    document.body.removeChild(gif);
+                },1000)
+            }, 2000) 
+        })
+    </script> -->
 
     <header class="g-container grid-12 rows-3 m-a" id="blurHead">
 
@@ -86,7 +103,7 @@ session_start();
             } else {
                 ?>
                 <!-- <div class="c10-3 r2-1 gg"> -->
-                <button onclick="popCo()" class="signup space style_btn">Connection</button>
+                <button onclick="popCo()" class="signup space style_btn">Connexion</button>
                 <button onclick="popInsc()" class="signin style_btn">Inscription</button>
                 <!-- </div> -->
             <?php

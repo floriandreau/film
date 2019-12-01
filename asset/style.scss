@@ -127,6 +127,7 @@ h1{
     font-size: 20px;
     text-transform: uppercase;
     color: $secondColor;
+    cursor: pointer;
 }
 
 .style_user{
@@ -156,6 +157,7 @@ h1{
     text-transform: uppercase;
     font-family: 'OSCb';
     font-size: 14px;
+    cursor: pointer;
 }
 
 .cache{
@@ -164,4 +166,9 @@ h1{
 
 .hide{
     display: none;
+}
+
+.style-croix{
+    width: 30px;
+    height: auto;
 }
